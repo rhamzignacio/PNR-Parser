@@ -12,11 +12,11 @@ namespace PNRParser.Service
         {
             using(var db = new PNRParserEntities())
             {
-                var city = db.Cities.FirstOrDefault(r => r.CITY_CODE == input);
+                var city = db.Airport.FirstOrDefault(r => r.CityCode == input);
 
                 if (city != null)
                 {
-                    return city.CITY_NAME;
+                    return city.CityDescription;
                 }
                 else
                     return "";

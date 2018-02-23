@@ -77,33 +77,34 @@
             label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             label3.AutoSize = true;
             label3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            label3.Location = new System.Drawing.Point(520, 490);
+            label3.Location = new System.Drawing.Point(487, 513);
             label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(109, 13);
+            label3.Size = new System.Drawing.Size(81, 13);
             label3.TabIndex = 16;
-            label3.Text = "Enter Record Locator";
+            label3.Text = "Record Locator";
             // 
             // label5
             // 
             label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             label5.AutoSize = true;
             label5.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            label5.Location = new System.Drawing.Point(47, 103);
+            label5.Location = new System.Drawing.Point(24, 51);
             label5.Name = "label5";
-            label5.Size = new System.Drawing.Size(61, 13);
+            label5.Size = new System.Drawing.Size(42, 13);
             label5.TabIndex = 21;
-            label5.Text = "MS Access";
+            label5.Text = "Access";
+            label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
             label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             label6.AutoSize = true;
             label6.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            label6.Location = new System.Drawing.Point(150, 103);
+            label6.Location = new System.Drawing.Point(86, 50);
             label6.Name = "label6";
-            label6.Size = new System.Drawing.Size(62, 13);
+            label6.Size = new System.Drawing.Size(28, 13);
             label6.TabIndex = 22;
-            label6.Text = "SQL Server";
+            label6.Text = "SQL";
             // 
             // topPanel
             // 
@@ -262,7 +263,7 @@
             this.groupBox1.Controls.Add(this.checkBoxContact);
             this.groupBox1.Controls.Add(this.checkBoxItineraryWithPax);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.groupBox1.Location = new System.Drawing.Point(59, 480);
+            this.groupBox1.Location = new System.Drawing.Point(16, 481);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(455, 54);
             this.groupBox1.TabIndex = 11;
@@ -326,7 +327,7 @@
             // txtBoxRecordLocator
             // 
             this.txtBoxRecordLocator.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtBoxRecordLocator.Location = new System.Drawing.Point(523, 506);
+            this.txtBoxRecordLocator.Location = new System.Drawing.Point(477, 490);
             this.txtBoxRecordLocator.MaxLength = 6;
             this.txtBoxRecordLocator.Name = "txtBoxRecordLocator";
             this.txtBoxRecordLocator.Size = new System.Drawing.Size(106, 20);
@@ -338,7 +339,7 @@
             this.btnRetrieve.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(87)))), ((int)(((byte)(154)))));
             this.btnRetrieve.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRetrieve.ForeColor = System.Drawing.Color.White;
-            this.btnRetrieve.Location = new System.Drawing.Point(648, 500);
+            this.btnRetrieve.Location = new System.Drawing.Point(593, 487);
             this.btnRetrieve.Name = "btnRetrieve";
             this.btnRetrieve.Size = new System.Drawing.Size(89, 20);
             this.btnRetrieve.TabIndex = 17;
@@ -352,9 +353,9 @@
             this.btnClear.BackColor = System.Drawing.Color.Tomato;
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnClear.ForeColor = System.Drawing.Color.White;
-            this.btnClear.Location = new System.Drawing.Point(743, 500);
+            this.btnClear.Location = new System.Drawing.Point(593, 511);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(75, 20);
+            this.btnClear.Size = new System.Drawing.Size(89, 20);
             this.btnClear.TabIndex = 18;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
@@ -383,65 +384,66 @@
             // label4
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(813, 4);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(54, 13);
             this.label4.TabIndex = 0;
-            this.label4.Text = "2.3";
+            this.label4.Text = "3.0";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // panelDBSelection
             // 
             this.panelDBSelection.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panelDBSelection.Controls.Add(label6);
-            this.panelDBSelection.Controls.Add(label5);
             this.panelDBSelection.Controls.Add(this.label2);
             this.panelDBSelection.Controls.Add(this.btnSQLServer);
+            this.panelDBSelection.Controls.Add(label5);
             this.panelDBSelection.Controls.Add(this.btnMSAccess);
-            this.panelDBSelection.Location = new System.Drawing.Point(310, 194);
+            this.panelDBSelection.Location = new System.Drawing.Point(703, 478);
             this.panelDBSelection.Name = "panelDBSelection";
-            this.panelDBSelection.Size = new System.Drawing.Size(251, 134);
+            this.panelDBSelection.Size = new System.Drawing.Size(147, 66);
             this.panelDBSelection.TabIndex = 21;
             this.panelDBSelection.Visible = false;
+            this.panelDBSelection.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDBSelection_Paint);
             // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(87)))), ((int)(((byte)(154)))));
-            this.label2.Location = new System.Drawing.Point(9, 5);
+            this.label2.Location = new System.Drawing.Point(11, 3);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(230, 27);
+            this.label2.Size = new System.Drawing.Size(132, 18);
             this.label2.TabIndex = 20;
-            this.label2.Text = "Select Database Type";
+            this.label2.Text = "Database Type";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // btnSQLServer
             // 
-            this.btnSQLServer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnSQLServer.BackColor = System.Drawing.Color.Transparent;
             this.btnSQLServer.BackgroundImage = global::PNRParser.Properties.Resources.download;
             this.btnSQLServer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSQLServer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSQLServer.ForeColor = System.Drawing.Color.White;
-            this.btnSQLServer.Location = new System.Drawing.Point(137, 45);
+            this.btnSQLServer.Location = new System.Drawing.Point(82, 19);
             this.btnSQLServer.Name = "btnSQLServer";
-            this.btnSQLServer.Size = new System.Drawing.Size(89, 55);
+            this.btnSQLServer.Size = new System.Drawing.Size(32, 32);
             this.btnSQLServer.TabIndex = 19;
             this.btnSQLServer.UseVisualStyleBackColor = false;
             this.btnSQLServer.Click += new System.EventHandler(this.btnSQLServer_Click);
             // 
             // btnMSAccess
             // 
-            this.btnMSAccess.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnMSAccess.BackColor = System.Drawing.Color.Transparent;
             this.btnMSAccess.BackgroundImage = global::PNRParser.Properties.Resources.Microsoft_Access_2013_logo_svg;
             this.btnMSAccess.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnMSAccess.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMSAccess.ForeColor = System.Drawing.Color.White;
-            this.btnMSAccess.Location = new System.Drawing.Point(29, 45);
+            this.btnMSAccess.Location = new System.Drawing.Point(29, 20);
             this.btnMSAccess.Name = "btnMSAccess";
-            this.btnMSAccess.Size = new System.Drawing.Size(89, 55);
+            this.btnMSAccess.Size = new System.Drawing.Size(32, 32);
             this.btnMSAccess.TabIndex = 18;
             this.btnMSAccess.UseVisualStyleBackColor = false;
             this.btnMSAccess.Click += new System.EventHandler(this.btnMSAccess_Click);

@@ -13,7 +13,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <IsWebBootstrapper>true</IsWebBootstrapper>
-    <PublishUrl>C:\inetpub\wwwroot\PNR Parser\</PublishUrl>
+    <PublishUrl>T:\wwwroot\PNR Parser\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Web</InstallFrom>
     <UpdateEnabled>true</UpdateEnabled>
@@ -23,14 +23,14 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>true</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <InstallUrl>http://192.168.0.3:1013/</InstallUrl>
+    <InstallUrl>http://192.168.0.47:2006/</InstallUrl>
     <ProductName>PNR Parser</ProductName>
     <PublisherName>Philscan Travel and Tours</PublisherName>
-    <MinimumRequiredVersion>2.3.0.0</MinimumRequiredVersion>
+    <MinimumRequiredVersion>3.0.0.0</MinimumRequiredVersion>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>index.html</WebPage>
     <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>2.3.0.0</ApplicationVersion>
+    <ApplicationVersion>3.0.0.0</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -68,7 +68,7 @@
     <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>701ADF2A89ABD5A6AAABB05FCBACD9B42074F7D7</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>576A2B5AAD513F7F16306FED5622A5D00A199A43</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>Arrioch-Whack-Whack-Google-Earth.ico</ApplicationIcon>
@@ -111,10 +111,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Airlines.cs">
-      <DependentUpon>TravcomEntities.tt</DependentUpon>
+    <Compile Include="AirlineName.cs">
+      <DependentUpon>PNRParserEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Cities.cs">
+    <Compile Include="Airlines.cs">
+      <DependentUpon>TravComEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Airport.cs">
       <DependentUpon>PNRParserEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.cs">
@@ -143,20 +146,20 @@
     <Compile Include="Service\AccessDB.cs" />
     <Compile Include="Service\AmadeusDLL.cs" />
     <Compile Include="Service\SQLServerDB.cs" />
-    <Compile Include="TravcomEntities.Context.cs">
+    <Compile Include="TravComEntities.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>TravcomEntities.Context.tt</DependentUpon>
+      <DependentUpon>TravComEntities.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="TravcomEntities.cs">
+    <Compile Include="TravComEntities.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>TravcomEntities.tt</DependentUpon>
+      <DependentUpon>TravComEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="TravcomEntities.Designer.cs">
+    <Compile Include="TravComEntities.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>TravcomEntities.edmx</DependentUpon>
+      <DependentUpon>TravComEntities.edmx</DependentUpon>
     </Compile>
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
@@ -189,12 +192,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EntityDeploy Include="TravcomEntities.edmx">
+    <EntityDeploy Include="TravComEntities.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>TravcomEntities.Designer.cs</LastGenOutput>
+      <LastGenOutput>TravComEntities.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="TravcomEntities.edmx.diagram">
-      <DependentUpon>TravcomEntities.edmx</DependentUpon>
+    <None Include="TravComEntities.edmx.diagram">
+      <DependentUpon>TravComEntities.edmx</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -228,15 +231,15 @@
       <DependentUpon>PNRParserEntities.edmx</DependentUpon>
       <LastGenOutput>PNRParserEntities.cs</LastGenOutput>
     </Content>
-    <Content Include="TravcomEntities.Context.tt">
+    <Content Include="TravComEntities.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>TravcomEntities.edmx</DependentUpon>
-      <LastGenOutput>TravcomEntities.Context.cs</LastGenOutput>
+      <DependentUpon>TravComEntities.edmx</DependentUpon>
+      <LastGenOutput>TravComEntities.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="TravcomEntities.tt">
+    <Content Include="TravComEntities.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>TravcomEntities.edmx</DependentUpon>
-      <LastGenOutput>TravcomEntities.cs</LastGenOutput>
+      <DependentUpon>TravComEntities.edmx</DependentUpon>
+      <LastGenOutput>TravComEntities.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>

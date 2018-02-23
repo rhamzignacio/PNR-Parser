@@ -158,21 +158,21 @@ namespace PNRParser.Service
 
                     string tempDate = airSegment.DepartureDate.ToString("ddMMM");
 
-                    string tempOrigin = "(" + airSegment.BoardPoint + ")";
+                    string tempOrigin = "";
 
-                    string tempDestination = "(" + airSegment.OffPoint + ")";
+                    string tempDestination = "";
 
                     if (Properties.Settings.Default.dbType == "ACCESS")
                     {
-                        tempOrigin = AccessDB.ConvertCityCode(airSegment.BoardPoint) + tempOrigin;
+                        tempOrigin = AccessDB.ConvertCityCode(airSegment.BoardPoint) + "(" + airSegment.BoardPoint + ")";
 
-                        tempDestination = AccessDB.ConvertCityCode(airSegment.OffPoint) + tempDestination;
+                        tempDestination = AccessDB.ConvertCityCode(airSegment.OffPoint) + "(" + airSegment.OffPoint + ")";
                     }
                     else
                     {
-                        tempOrigin += SQLServerDB.ConvertCityCode(airSegment.BoardPoint) + tempOrigin;
+                        tempOrigin += SQLServerDB.ConvertCityCode(airSegment.BoardPoint) + "(" + airSegment.BoardPoint + ")";
 
-                        tempDestination += SQLServerDB.ConvertCityCode(airSegment.OffPoint) + tempDestination;
+                        tempDestination += SQLServerDB.ConvertCityCode(airSegment.OffPoint) + "(" + airSegment.OffPoint + ")";
                     }
 
 

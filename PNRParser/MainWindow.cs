@@ -89,7 +89,7 @@ namespace PNRParser
             }
             else
             {
-                Normal("Connected to 192.168.0.6");
+                Normal("Connected to SQL Database");
             }
         }
 
@@ -360,6 +360,21 @@ namespace PNRParser
 
             if (testConnection.Count == 0)
                 Error("Amadeus Selling Platform is not Started");
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelDBSelection_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -25,6 +25,7 @@ namespace PNRParser
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Cities> Cities { get; set; }
+        public virtual DbSet<AirlineName> AirlineName { get; set; }
+        public virtual DbSet<Airport> Airport { get; set; }
     }
 }

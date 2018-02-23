@@ -12,10 +12,11 @@ namespace PNRParser
     using System;
     using System.Collections.Generic;
     
-    public partial class Cities
+    public partial class Airport
     {
         public int ID { get; set; }
-        public string CITY_CODE { get; set; }
-        public string CITY_NAME { get; set; }
+        public string CityCode { get; set; }
+        public string CityDescription { get; set; }
+        public string Airport1 { get; set; }
     }
 }

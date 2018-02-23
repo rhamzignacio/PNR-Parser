@@ -4,33 +4,55 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="PNRParserModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="Cities">
+      <Schema Namespace="PNRParserModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="AirlineName">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="int" Nullable="false" />
-          <Property Name="CITY_CODE" Type="varchar" MaxLength="3" />
-          <Property Name="CITY_NAME" Type="varchar" MaxLength="500" />
+          <Property Name="AirlineNo" Type="varchar" MaxLength="5" />
+          <Property Name="AirlineCode" Type="varchar" MaxLength="2" />
+          <Property Name="AirlineName" Type="varchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="Airport">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="CityCode" Type="varchar" MaxLength="3" />
+          <Property Name="CityDescription" Type="varchar" MaxLength="200" />
+          <Property Name="Airport" Type="varchar" MaxLength="200" />
         </EntityType>
         <EntityContainer Name="PNRParserModelStoreContainer">
-          <EntitySet Name="Cities" EntityType="Self.Cities" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AirlineName" EntityType="Self.AirlineName" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Airport" EntityType="Self.Airport" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="PNRParserModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="Cities">
+        <EntityType Name="AirlineName">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" />
-          <Property Name="CITY_CODE" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
-          <Property Name="CITY_NAME" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="AirlineNo" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="AirlineCode" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="AirlineName1" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Airport">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="CityCode" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="CityDescription" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Airport1" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityContainer Name="PNRParserEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Cities" EntityType="Self.Cities" />
+          <EntitySet Name="AirlineName" EntityType="Self.AirlineName" />
+          <EntitySet Name="Airport" EntityType="Self.Airport" />
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
@@ -38,12 +60,23 @@
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="PNRParserModelStoreContainer" CdmEntityContainer="PNRParserEntities">
-          <EntitySetMapping Name="Cities">
-            <EntityTypeMapping TypeName="PNRParserModel.Cities">
-              <MappingFragment StoreEntitySet="Cities">
+          <EntitySetMapping Name="AirlineName">
+            <EntityTypeMapping TypeName="PNRParserModel.AirlineName">
+              <MappingFragment StoreEntitySet="AirlineName">
                 <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="CITY_CODE" ColumnName="CITY_CODE" />
-                <ScalarProperty Name="CITY_NAME" ColumnName="CITY_NAME" />
+                <ScalarProperty Name="AirlineNo" ColumnName="AirlineNo" />
+                <ScalarProperty Name="AirlineCode" ColumnName="AirlineCode" />
+                <ScalarProperty Name="AirlineName1" ColumnName="AirlineName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Airport">
+            <EntityTypeMapping TypeName="PNRParserModel.Airport">
+              <MappingFragment StoreEntitySet="Airport">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="CityCode" ColumnName="CityCode" />
+                <ScalarProperty Name="CityDescription" ColumnName="CityDescription" />
+                <ScalarProperty Name="Airport1" ColumnName="Airport" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -62,7 +95,7 @@
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
         <DesignerProperty Name="EnablePluralization" Value="false" />
-        <DesignerProperty Name="IncludeForeignKeysInModel" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
       </DesignerInfoPropertySet>
